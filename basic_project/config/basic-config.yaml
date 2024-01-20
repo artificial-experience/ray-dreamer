@@ -1,0 +1,35 @@
+construct_directive:
+  configuration:
+    config_name:
+      type: str
+      choice: ppo-256-256-no-attention.yaml
+    construct_class:
+      type: str
+      choice: PPOConstruct
+    ray_prefix:
+      type: str
+      choice: PPO
+
+tuner_directive:
+  ai-runtime-conditions:
+    run-config:
+      verbose:
+        type: int
+        choice: 1
+    stop-config:
+      training_iteration:
+        type: int
+        choice: 4000
+      timesteps_total:
+        type: int
+        choice: 100000
+      episode_reward_mean:
+        type: float
+        choice: 0.7
+    checkpoint-config:
+        checkpoint_frequency:
+          type: int
+          choice: 1000
+        checkpoint_at_end:
+          type: bool
+          choice: true

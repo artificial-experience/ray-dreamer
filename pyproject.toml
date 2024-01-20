@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ray-rllib-basic-project"
+version = "1.1.0"
+description = ""
+authors = ["Jamie Chojnacki <chojnacki.jamie@gmail.com>"]
+readme = "README.md"
+packages = [{include = "basic_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ray = {extras = ["rllib"], version = "^2.5.1"}
+mypy = "^1.4.1"
+pyyaml = "^6.0.1"
+tensorflow-probability = "^0.20.1"
+torch = "^2.0.1"
+gputil = "^1.4.0"
+gymnasium = "0.26.3"
+glfw = "^2.6.2"
+mujoco = "^2.3.6"
+click = "^8.1.6"
+black = "^23.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
