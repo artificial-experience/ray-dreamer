@@ -1,5 +1,5 @@
-from basic_project.common import methods, constants
-from basic_project import environment
+from src.common import methods, constants
+from src import environment
 from delegator.abstract.base_construct import BaseConstruct
 from ray.rllib.algorithms.ppo.ppo import PPOConfig
 

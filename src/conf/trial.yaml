@@ -19,10 +19,10 @@ tuner_directive:
     stop-config:
       training_iteration:
         type: int
-        choice: 4000
+        choice: 10_000
       timesteps_total:
         type: int
-        choice: 100000
+        choice: 1_000_000
       episode_reward_mean:
         type: float
         choice: 0.7

@@ -59,6 +59,6 @@ class Tune:
 
 
 if __name__ == "__main__":
-    basic_config_name = "basic-config.yaml"
+    basic_config_name = "trial.yaml"
     tune = Tune(basic_config_name)
     tune.execute_trial()
