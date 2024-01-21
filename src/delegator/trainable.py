@@ -1,6 +1,7 @@
 from common import methods
-from .construct.ppo import PPOConstruct
-from .abstract.registration import ConstructRegistry
+from src.construct.ppo import PPOConstruct
+from src.construct.dreamerv3 import DreamerV3Construct
+from src.abstract.registration import ConstructRegistry
 
 
 class TrainableConstructDelegator:

@@ -1,0 +1,66 @@
+dreamerv3-directive:
+  trainable:
+    type: str
+    choice: DreamerV3
+  rollouts:
+    num-workers:
+      type: int
+      choice: 4
+    num-envs-per-worker:
+      type: int
+      choice: 2
+    rollout_fragment_length:
+      type: int
+      choice: 64
+  framework:
+    type: str
+    choice: tf2
+  training:
+    model_size:
+      type: str
+      choice: XS
+    training_ratio:
+      type: int
+      choice: 1
+    lr:
+      type: float
+      choice: 0.0003
+    model:
+      type: dict
+      choice: {
+        "batch_size_B": 1,
+        "batch_length_T": 1,
+        "horizon_H": 1,
+        "gamma": 0.997,
+        "model_size": XS
+        }
+  resources:
+    num_gpus:
+      type: int
+      choice: 0
+  evaluation:
+    evaluation-interval:
+      type: int
+      choice: 4000
+    evaluation-duration:
+      type: int
+      choice: 100
+    enable_async_evaluation:
+      type: bool
+      choice: true
+
+env-directive:
+  prefix:
+    type: str
+    choice: simple-corridor-v0
+  custom_env_class_name:
+    type: str
+    choice: SimpleCorridor
+  custom_env_class_creator:
+    type: str
+    choice: simple_corridor_creator
+  env_config:
+    type: dict
+    choice: {
+      "corridor_length": 5,
+      }

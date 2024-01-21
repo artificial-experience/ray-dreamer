@@ -2,25 +2,26 @@
 name = "ray-dreamer"
 version = "0.1.0"
 description = ""
-authors = ["Jamie Chojnacki <chojnacki.jamie@gmail.com>"]
+authors = ["James Chojnacki <james@marl.engineering>"]
 readme = "README.md"
 packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-ray = {extras = ["rllib"], version = "^2.5.1"}
+python = ">=3.9,<3.12"
+ray = {extras = ["rllib"], version = "2.9.0"}
 mypy = "^1.4.1"
 pyyaml = "^6.0.1"
-tensorflow-probability = "^0.20.1"
 torch = "^2.0.1"
 gputil = "^1.4.0"
-gymnasium = "0.26.3"
+gymnasium = "0.28.1"
 glfw = "^2.6.2"
-mujoco = "^2.3.6"
 click = "^8.1.6"
 black = "^23.7.0"
 hydra-core = "^1.3.2"
-
+tensorflow-estimator = "2.15.0"
+tensorflow-io-gcs-filesystem = "0.34.0"
+tensorflow-macos = "2.15.0"
+tensorflow-probability = "0.23.0"
 
 [build-system]
 requires = ["poetry-core"]

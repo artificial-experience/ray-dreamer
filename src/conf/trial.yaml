@@ -2,13 +2,13 @@ construct_directive:
   configuration:
     config_name:
       type: str
-      choice: ppo-256-256-no-attention.yaml
+      choice: dreamerv3-xs.yaml
     construct_class:
       type: str
-      choice: PPOConstruct
+      choice: DreamerV3Construct
     ray_prefix:
       type: str
-      choice: PPO
+      choice: DreamerV3
 
 tuner_directive:
   ai-runtime-conditions:
