@@ -1,6 +1,8 @@
 ![supported python versions](https://img.shields.io/badge/python-%3E%3D%203.6-306998)
 ![license MIT](https://img.shields.io/badge/licence-MIT-green)
 
+![DreamerV3 Logo](misc/img/logo.png)
+
 # Ray DreamerV3 Project Template
 
 This template is designed for experimenting with the Ray DreamerV3 algorithm, specifically tailored for use with custom environments. It provides a structured, modular setup for training Reinforcement Learning (RL) models using the Ray RLlib library, focusing on the DreamerV3 algorithm and its integration with custom environments compliant with the OpenAI Gym API.
