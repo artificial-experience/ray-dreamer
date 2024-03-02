@@ -8,7 +8,7 @@ from common import constants, methods
 # TODO: consider adding click package for CLI
 class Tune:
     """
-    Interface class between ray and farma gymansium
+    Interface class between ray and farma gymnasium
 
     Args:
         :param [config]: configuration dictionary for engine
