@@ -48,11 +48,6 @@ class DreamerV3Construct(BaseConstruct):
             ),
         }
 
-   # def _env_config(self):
-   #     return {
-   #         "env": "CartPole-v1",
-   #     }
-
     def _framework_config(self):
         return {
             "framework": methods.get_nested_dict_field(
