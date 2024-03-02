@@ -1,14 +1,14 @@
 import ray
-from pathlib import Path
-import click
 
 from delegator import TunerDelegator
 from common import constants, methods
 
 
+# TODO: consider functional approach instead of class due to stateless nature
+# TODO: consider adding click package for CLI
 class Tune:
     """
-    Interface class between ray and farma gym
+    Interface class between ray and farma gymansium
 
     Args:
         :param [config]: configuration dictionary for engine
@@ -17,7 +17,7 @@ class Tune:
         :param [trainable]: algorithm and objective function to be trained on the problem
     """
 
-    def __init__(self, config_name: dict):
+    def __init__(self, config_name: str):
         self._config_name = config_name
 
         self._trial_configuration = None
@@ -43,8 +43,7 @@ class Tune:
             tuner_directive=self._tuner_directive,
         ).delegate_tuner_entity()
 
-    # TODO: add possibility to connect to AWS as remote=True
-    def execute_trial(self, remote=False):
+    def execute_trial(self):
         self._set_trial_configuration()
         self._prepare_trial()
 

@@ -4,7 +4,6 @@ from ray.tune.registry import register_env
 from ray.tune.registry import _global_registry, ENV_CREATOR
 
 from datetime import datetime
-from functools import wraps
 from os.path import expandvars
 
 import yaml

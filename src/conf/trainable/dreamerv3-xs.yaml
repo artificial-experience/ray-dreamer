@@ -3,15 +3,15 @@ dreamerv3-directive:
     type: str
     choice: DreamerV3
   rollouts:
-    num-workers:
+    num-rollout-workers:
       type: int
-      choice: 4
+      choice: 0 # only driver process
     num-envs-per-worker:
       type: int
-      choice: 2
+      choice: 1
     rollout_fragment_length:
       type: int
-      choice: 64
+      choice: 1
   framework:
     type: str
     choice: tf2
@@ -21,7 +21,7 @@ dreamerv3-directive:
       choice: XS
     training_ratio:
       type: int
-      choice: 1
+      choice: 1024
     lr:
       type: float
       choice: 0.0003

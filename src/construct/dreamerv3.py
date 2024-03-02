@@ -5,7 +5,7 @@ from ray.rllib.algorithms.dreamerv3.dreamerv3 import DreamerV3Config
 
 
 class DreamerV3Construct(BaseConstruct):
-    def __init__(self, construct_registry_directive: dict):
+    def __init__(self, construct_registry_directive: str):
         self._construct_registry_directive = construct_registry_directive
         self._construct_configuration = None
 
@@ -48,6 +48,11 @@ class DreamerV3Construct(BaseConstruct):
             ),
         }
 
+   # def _env_config(self):
+   #     return {
+   #         "env": "CartPole-v1",
+   #     }
+
     def _framework_config(self):
         return {
             "framework": methods.get_nested_dict_field(
@@ -60,7 +65,7 @@ class DreamerV3Construct(BaseConstruct):
         return {
             "num_rollout_workers": methods.get_nested_dict_field(
                 directive=self._construct_configuration,
-                keys=["dreamerv3-directive", "rollouts", "num-workers", "choice"],
+                keys=["dreamerv3-directive", "rollouts", "num-rollout-workers", "choice"],
             ),
             "num_envs_per_worker": methods.get_nested_dict_field(
                 directive=self._construct_configuration,

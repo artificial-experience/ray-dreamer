@@ -8,7 +8,7 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
-ray = {extras = ["rllib"], version = "2.9.0"}
+ray = {extras = ["rllib"], version = "2.9.2"}
 mypy = "^1.4.1"
 pyyaml = "^6.0.1"
 torch = "^2.0.1"
@@ -22,6 +22,7 @@ tensorflow-estimator = "2.15.0"
 tensorflow-io-gcs-filesystem = "0.34.0"
 tensorflow-macos = "2.15.0"
 tensorflow-probability = "0.23.0"
+pygame = "^2.5.2"
 
 [build-system]
 requires = ["poetry-core"]

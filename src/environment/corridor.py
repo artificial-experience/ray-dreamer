@@ -22,7 +22,8 @@ class SimpleCorridor(gym.Env):
     def reset(self, *, seed=None, options=None):
         random.seed(seed)
         self.cur_pos = 0
-        return np.array([self.cur_pos]).astype(np.float32), {}  # convert return type to  np.float32
+        #return np.array([self.cur_pos]).astype(np.float32), {}  # convert return type to  np.float32
+        return self.observation_space.sample(), {}
 
     def step(self, action):
         assert action in [0, 1], action

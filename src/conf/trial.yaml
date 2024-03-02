@@ -25,7 +25,7 @@ tuner_directive:
         choice: 1_000_000
       episode_reward_mean:
         type: float
-        choice: 0.7
+        choice: 1_000
     checkpoint-config:
         checkpoint_frequency:
           type: int
